@@ -34,29 +34,29 @@ PC 主机进行 BIOS 级的远程桌面、电源管理、远程串口、镜像�
 
 ## 功能规格
 
-| 功能           | ArmKVM Standard V1 | PiKVM |
-|--------------|:------------------:|:-----:|
-| 中文 WebUI     |      √ (WIP)       |   x   |
-| 远程画面推流       |         √          |   √   |
-| 远程键盘鼠标控制     |         √          |   √   |
-| 大容量存储驱动器模拟   |         √          |   √   |
-| 网络串口终端 (SoL) |         √          |   √   |
-| ATX 电源控制     |         √          |   √   |
-| 网页剪切板        |         √          |   √   |
-| 网页终端         |         √          |   √   |
-| GPIO 控制      |         √          |   √   |
-| HDMI 切换器支持   |         √          |   √   |
-| 远程网络唤醒 (WoL) |         √          |   √   |
-| 本地看门狗        |         √          |   √   |
-| 远程看门狗        |       √ (登录)       |   ×   |
-| 全球快速连接技术     |       √ (登录)       |   ×   |
-| 独立/临时连接码     |       √ (订阅)       |   ×   |
-| 独立二级域名       |       √ (订阅)       |   ×   |
-| 自动 UPnP 端口转发 |       √ (登录)       |   ×   |
-| 内网穿透         |       √ (订阅)       |   ×   |
-| 反向代理服务器      |       √ (订阅)       |   ×   |
-| 邮件消息事件推送     |       √ (订阅)       |   ×   |
-| 微信消息事件推送     |       √ (订阅)       |   ×   |
+| 功能            | ArmKVM Standard V1 | PiKVM |
+|---------------|:------------------:|:-----:|
+| 中文 WebUI      |      √ (WIP)       |   x   |
+| 远程画面推流        |         √          |   √   |
+| 远程键盘鼠标控制      |         √          |   √   |
+| 大容量存储驱动器模拟    |         √          |   √   |
+| 网络串口终端 (SoL)  |         √          |   √   |
+| ATX 电源控制      |         √          |   √   |
+| 网页剪切板         |         √          |   √   |
+| 网页终端          |         √          |   √   |
+| GPIO 控制       |         √          |   √   |
+| HDMI 切换器支持    |         √          |   √   |
+| 远程网络唤醒 (WoL)  |         √          |   √   |
+| 本地看门狗         |         √          |   √   |
+| 远程看门狗         |       √ (登录)       |   ×   |
+| GlobalConnect |       √ (登录)       |   ×   |
+| 独立/临时连接码      |       √ (订阅)       |   ×   |
+| 独立二级域名        |       √ (订阅)       |   ×   |
+| 自动 UPnP 端口转发  |       √ (登录)       |   ×   |
+| 内网穿透          |       √ (订阅)       |   ×   |
+| 反向代理服务器       |       √ (订阅)       |   ×   |
+| 邮件消息事件推送      |       √ (订阅)       |   ×   |
+| 微信消息事件推送      |       √ (订阅)       |   ×   |
 
 # 快速上手
 
@@ -67,27 +67,26 @@ PC 主机进行 BIOS 级的远程桌面、电源管理、远程串口、镜像�
 
 1. ArmKVM 最新镜像下载：
 
-| 硬件版本               | 系统环境       | IP-KVM 功能 | 发布版本                                      |                                                                                                                  |                                                                                   
-|--------------------|------------|:---------:|-------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| ArmKVM-Standard-V1 | Arch Linux |   PiKVM   | arch-linux-pikvm-full-unstable-2307300201 | [下载](http://jsz.myds.me:10000/ArmKVM/images/ArmKVM-Standard-V1_Arch-Linux-PiKVM-Full-Unstable-2307300201.img.gz) |
-| ArmKVM-Standard-V1 | Arch Linux |   PiKVM   | arch-linux-pikvm-minimal-unstable-230719  | [~~下载~~]()                                                                                                       |
-| ArmKVM-Standard-V1 | BusyBox    |  ArmKVM   | buildroot-armkvm-unstable-230719          | [~~下载~~]()                                                                                                       |
-| ArmKVM-Standard-V1 | BusyBox    |     ×     | buildroot-unstable-230719                 | [~~下载~~]()                                                                                                       |
-| ArmKVM-Standard-V1 | Armbian    |     ×     | armbian-minimal-230719                    | [~~下载~~]()                                                                                                       |
+| 硬件版本               | 操作系统       | 内置 PiKVM | 版本                                       |                                                            下载地址                                                             |                                                                                   
+|--------------------|------------|:--------:|------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------:|
+| ArmKVM-Standard-V1 | Arch Linux |    √     | arch-linux-pikvm-full-unstable-230729    | [下载](http://913666.xyz:50080/ArmKVM/images/Standard-V1/ArmKVM-Standard-V1_Arch-Linux-PiKVM-Full-Unstable-2307300201.img.gz) |
+| ArmKVM-Standard-V1 | Arch Linux |    √     | arch-linux-pikvm-minimal-unstable-230719 |                                                         [~~下载~~]()                                                          |
+| ArmKVM-Standard-V1 | Armbian    |    ×     | armbian-minimal-230719                   |                                                         [~~下载~~]()                                                          |
+| ArmKVM-Standard-V1 | BusyBox    |    ×     | buildroot-230719                         |                                                         [~~下载~~]()                                                          |
 
-> 历史镜像归档：[浏览](https://jsz.myds.me:10000/ArmKVM/images/archive)
+> 历史镜像归档：[浏览](http://913666.xyz:50080/ArmKVM/images)
 
 2. 下载 Etcher 烧录工具：[Etcher 官网下载](https://etcher.balena.io)<br>
    Etcher 官方提供了 Windows、MacOS 和 Linux 三个平台的版本，您可以根据自己的系统下载对应的版本。<br>
    Etcher 官方下载地址较慢，您也可以从以下镜像链接下载：
 
-|   系统    |   架构   | 类型        | 版本      |                                                                                                                       |
-|:-------:|:------:|-----------|---------|-----------------------------------------------------------------------------------------------------------------------|
-| Windows | X86_64 | 安装器 (exe) | 1.18.11 | [下载](https://cors.isteed.cc/github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Setup-1.18.11.exe)    |
+| 系统      | 架构     | 类型        | 版本      |                                                         下载地址                                                          |
+|---------|--------|-----------|---------|:---------------------------------------------------------------------------------------------------------------------:|
+| Windows | X86_64 | 安装器 (exe) | 1.18.11 |  [下载](https://cors.isteed.cc/github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Setup-1.18.11.exe)   |
 | Windows | X86_64 | 便携版 (exe) | 1.18.11 | [下载](https://cors.isteed.cc/github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-Portable-1.18.11.exe) |
-|  MacOS  |  X64   | 安装器 (dmg) | 1.18.11 | [下载](https://cors.isteed.cc/github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-1.18.11.dmg)          |
-|  Linux  |  X64   | 安装器 (deb) | 1.18.11 | [下载](https://cors.isteed.cc/github.com/balena-io/etcher/releases/download/v1.18.11/balena-etcher_1.18.11_amd64.deb)   |
-|  Linux  | X86_64 | 安装器 (rpm) | 1.18.11 | [下载](https://cors.isteed.cc/github.com/balena-io/etcher/releases/download/v1.18.11/balena-etcher-1.18.11.x86_64.rpm)  |
+| MacOS   | X64    | 安装器 (dmg) | 1.18.11 |     [下载](https://cors.isteed.cc/github.com/balena-io/etcher/releases/download/v1.18.11/balenaEtcher-1.18.11.dmg)      |
+| Linux   | X64    | 安装器 (deb) | 1.18.11 |  [下载](https://cors.isteed.cc/github.com/balena-io/etcher/releases/download/v1.18.11/balena-etcher_1.18.11_amd64.deb)  |
+| Linux   | X86_64 | 安装器 (rpm) | 1.18.11 | [下载](https://cors.isteed.cc/github.com/balena-io/etcher/releases/download/v1.18.11/balena-etcher-1.18.11.x86_64.rpm)  |
 
 3. 打开 Etcher 烧录工具，选择下载好的镜像文件，选择您的TF卡，点击 `烧录` 按钮开始烧录。
    烧录并校验完成后，您的TF卡会被弹出，您可以将TF卡插入 ArmKVM 中。
@@ -150,7 +149,7 @@ ArmKVM 的 `RS232 COM` 口；服务器或工控设备的串口一般为 `DB9` �
 > 该功能测试中，近期上线
 
 1. 通过 GlobalConnect 功能，您可以在不知道 ArmKVM 的 IP 地址的情况下，自动搜寻到局域网内的 ArmKVM 设备。
-   请确保您的 ArmKVM 和电脑在同一局域网内，然后访问 [GlobalConnect](https://find.ikvm.top) ，点击 `搜寻` 按钮即可。
+   请确保您的 ArmKVM 和电脑在同一局域网内，然后访问 [Find - GlobalConnect](https://find.ikvm.top) ，点击 `搜寻` 按钮即可。
 2. 搜寻到的 ArmKVM 设备会显示在列表中，点击对应的`连接`按钮即可连接到 ArmKVM 的 Web 管理控制台。
 
 ### 手动连接
@@ -197,9 +196,19 @@ ArmKVM 提供的各项功能了，Enjoy it!
 
 # 进阶使用
 
+## GlobalConnect
+
+### Find - GlobalConnect
+
+### Domain - GlobalConnect
+
+### UPnP - GlobalConnect
+
+### P2P - GlobalConnect
+
 ## 切换至 root 用户
 
-在 `网页终端` 界面输入 `su -` 命令并回车，按照提示输入 root 用户的默认密码 `root`，回车即可切换至 root 用户。
+在 `网页终端` 界面输入 `su -` 命令并回车，按照提示输入 root 用户的密码(默认密码为 `root`)，回车即可切换至 root 用户。
 
 ## 文件系统只读/读写模式切换
 
@@ -209,23 +218,65 @@ ArmKVM 提供的各项功能了，Enjoy it!
 
 !> 注意：使用 `nmtui` 命令配置无线网络前，请先切换至 root 用户并将文件系统切换至读写模式。
 
-将受支持的USB无线网卡接入ArmKVM，在 `网页终端` 界面输入 `nmtui` 命令并回车。
-[![NetworkManager TUI](https://s1.ax1x.com/2023/07/29/pPpFYZ9.jpg)](https://imgse.com/i/pPpFYZ9)
-进入 `NetworkManager TUI` 界面后，使用方向键选择 `Activate a connection` 并回车，即可扫描并选择您的无线网络。
-[![无线网络列表](https://s1.ax1x.com/2023/07/30/pPpFhz8.jpg)](https://imgse.com/i/pPpFhz8)
+1. 将受支持的USB无线网卡接入 ArmKVM ，受支持的 USB 无线网卡的型号请参考 [无线网卡支持列表](#无线网卡支持列表)。
+2. 在 `网页终端` 界面输入 `su -` 命令并回车，按照提示输入 root 用户的密码(默认密码为 `root`)，回车切换至 root 用户。
+3. 继续在 `网页终端` 界面输入 `rw && systemctl restart NetworkManager`
+   命令并回车，此命令将文件系统切换至读写模式并重启 `NetworkManager` 服务。此时 `网页终端`
+   可能会断开连接并自动重连，您需要重新连接到 `网页终端`。
+   [![NetworkManager TUI](https://s1.ax1x.com/2023/07/29/pPpFYZ9.jpg)](https://imgse.com/i/pPpFYZ9)
+4. 继续在 `网页终端` 界面输入 `nmtui` 命令并回车。
+   [![NetworkManager TUI](https://s1.ax1x.com/2023/07/29/pPpFYZ9.jpg)](https://imgse.com/i/pPpFYZ9)
+5. 进入 `NetworkManager TUI` 界面后，使用方向键选择 `Activate a connection` 并回车，即可扫描并选择连接您的无线网络。
+   [![无线网络列表](https://s1.ax1x.com/2023/07/30/pPpFhz8.jpg)](https://imgse.com/i/pPpFhz8)
 
-## 端口转发
-
-### 自动
-
-### 手动
-
-## 内网穿透
+!> 注意：配置完成后，建议将文件系统切换回只读模式以应对意外断电。
 
 ## 虚拟局域网 (VPN)
 
-# 常见问题
+### ZeroTier
 
-## 版本与规格
+!> 注意：配置 `ZeroTier` 内网穿透前，请先切换至 root 用户并将文件系统切换至读写模式。
+
+1. 在 `网页终端` 界面输入 `systemctl enable zerotier-one` 命令并回车，即可启用 `Zerotier`
+   服务 (开机启动项)。
+   [![ZeroTier](https://s1.ax1x.com/2023/07/30/pPpFqHJ.jpg)](https://imgse.com/i/pPpFqHJ)
+2. 继续在 `网页终端` 界面输入 `systemctl start zerotier-one` 命令并回车，即可运行 `Zerotier` 服务。
+   [![ZeroTier](https://s1.ax1x.com/2023/07/30/pPpFqHJ.jpg)](https://imgse.com/i/pPpFqHJ)
+3. 继续在 `网页终端` 界面输入 `zerotier-cli join` 命令并回车，按照提示输入 `Zerotier` 网络
+   ID，回车即可加入 `Zerotier` 网络。
+   [![ZeroTier](https://s1.ax1x.com/2023/07/30/pPpFqHJ.jpg)](https://imgse.com/i/pPpFqHJ)
+
+!> 注意：配置完成后，建议将文件系统切换回只读模式以应对意外断电。
+
+## 内网穿透
+
+### NPS
+
+### FRP
 
 ## 外设支持列表
+
+### 无线网卡支持列表
+
+> 声明：以下列表中的无线网卡购买链接均根据近期电商最低价选出，仅供参考推荐，和商家无利益关系，如参考价格与链接实际价格不符，或者您有更好的购买渠道，欢迎在群组中提出。
+
+1. 成品推荐列表
+
+| 型号               | 芯片        | 连接速率 (5G + 2.4G) | 推荐指数 | 参考价格 |                      购买链接                      |
+|------------------|-----------|:----------------:|:----:|:----:|:----------------------------------------------:|
+| COMFAST CF-812AC | RTL8812BU |   867M + 300M    | 5 星  | ¥ 29 | [购买](https://m.tb.cn/h.54ur5na?tk=ynPTdB3msQf) |
+| 杂牌 CF-811AC      | RTL8812BU |   433M + 150M    | 3 星  | ¥ 21 | [购买](https://m.tb.cn/h.5VAld6Z?tk=n5FMdB3Lqan) |
+
+2. 芯片型号支持列表
+
+| 芯片型号    | 连接速率 (5G + 2.4G) |
+|---------|:----------------:|
+| RTL8812 |   867M + 300M    |
+| RTL8811 |   433M + 150M    |
+| RTL8822 |   867M + 300M    |
+| RTL8821 |   433M + 150M    |
+| RTL8192 |     0M +300M     |
+| RTL8723 |    0M + 150M     |
+| RTL8188 |    0M + 150M     |
+
+# 常见问题
