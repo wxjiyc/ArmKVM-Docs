@@ -20,26 +20,27 @@ PC 主机进行 BIOS 级的远程桌面、电源管理、远程串口、镜像�
 
 ## 硬件规格
 
-| 型号      |              ArmKVM Standard V1              | PiKVM V3 Pre-Assembled |
-|---------|:--------------------------------------------:|:----------------------:|
-| SoC     |                   全志 H616                    |       博通 BCM2711       |
-| 内存      |                 512MB / 1GB                  |        2G / 4G         |
-| 存储      |                   外接 TF 卡                    |        外接 TF 卡         |
-| USB     | 1 * USB Type-A / 2 * USB Type-A + 2 * USB 插针 |     4 * USB Type-A     |
-| 以太网     |                10 / 100 Mbps                 |  10 / 100 / 1000 Mbps  |
-| Wi-Fi   |  支持外接 RTL8811 / RTL8812 / RTL8821 / RTL8822  |           板载           |
-| 尺寸 (含壳) |           86.5 mm x 74 mm x 27 mm            | 92 mm x 75 mm x 45 mm  |
-| 重量 (含壳) |                     100g                     |          410g          |
-| 售价      |                  $45 / $55                   |          $265          |
+| 型号      |           ArmKVM Standard V1 高配版           |           ArmKVM Standard V1 基础版           | PiKVM V3 Pre-Assembled |
+|---------|:------------------------------------------:|:------------------------------------------:|:----------------------:|
+| SoC     |                  全志 H616                   |                  全志 H616                   |       博通 BCM2711       |
+| 内存      |                  1G DDR3                   |                 512M DDR3                  |        2G / 4G         |
+| 存储      |                  外接 TF 卡                   |                  外接 TF 卡                   |        外接 TF 卡         |
+| USB     |        2 * USB Type-A + 2 * USB 插针         |               1 * USB Type-A               |     4 * USB Type-A     |
+| 以太网     |               10 / 100 Mbps                |               10 / 100 Mbps                |  10 / 100 / 1000 Mbps  |
+| Wi-Fi   | 支持外接 RTL8811 / RTL8812 / RTL8821 / RTL8822 | 支持外接 RTL8811 / RTL8812 / RTL8821 / RTL8822 |           板载           |
+| 尺寸 (含壳) |          86.5 mm x 74 mm x 27 mm           |          86.5 mm x 74 mm x 27 mm           | 92 mm x 75 mm x 45 mm  |
+| 重量 (含壳) |                    100g                    |                    100g                    |          410g          |
+| 售价      |                 $45 / $55                  |                 $45 / $55                  |          $265          |
 
 ## 功能规格
 
 | 功能            | ArmKVM Standard V1 | PiKVM |
 |---------------|:------------------:|:-----:|
-| 中文 WebUI      |      √ (WIP)       |   x   |
+| 中文 WebUI      |         √          |   x   |
 | 远程画面推流        |         √          |   √   |
 | 远程键盘鼠标控制      |         √          |   √   |
 | 大容量存储驱动器模拟    |         √          |   √   |
+| 2.2G 以上镜像挂载支持 |    √ (Testing)     |   x   |
 | 网络串口终端 (SoL)  |         √          |   √   |
 | ATX 电源控制      |         √          |   √   |
 | 网页剪切板         |         √          |   √   |
@@ -49,7 +50,7 @@ PC 主机进行 BIOS 级的远程桌面、电源管理、远程串口、镜像�
 | 远程网络唤醒 (WoL)  |         √          |   √   |
 | 本地看门狗         |         √          |   √   |
 | 远程看门狗         |       √ (登录)       |   ×   |
-| GlobalConnect |       √ (登录)       |   ×   |
+| 全球快速连接技术      |       √ (登录)       |   ×   |
 | 独立/临时连接码      |       √ (订阅)       |   ×   |
 | 独立二级域名        |       √ (订阅)       |   ×   |
 | 自动 UPnP 端口转发  |       √ (登录)       |   ×   |
@@ -65,16 +66,18 @@ PC 主机进行 BIOS 级的远程桌面、电源管理、远程串口、镜像�
 !> 注意：烧录镜像前请务必确认您的 TF 卡规格至少为 `8GB` `Class 10` ，推荐的规格为 `64GB` `Class 10`
 ，同时确保重要数据已经备份，因为烧录镜像会清除 TF 卡上的所有数据。
 
-1. ArmKVM 最新镜像下载：
+1. 最新镜像下载：
 
-| 硬件版本               | 操作系统       | 内置 PiKVM | 版本                                       |                                                            下载地址                                                             |                                                                                   
-|--------------------|------------|:--------:|------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------:|
-| ArmKVM-Standard-V1 | Arch Linux |    √     | arch-linux-pikvm-full-unstable-230729    | [下载](http://913666.xyz:50080/ArmKVM/images/Standard-V1/ArmKVM-Standard-V1_Arch-Linux-PiKVM-Full-Unstable-2307300201.img.gz) |
-| ArmKVM-Standard-V1 | Arch Linux |    √     | arch-linux-pikvm-minimal-unstable-230719 |                                                         [~~下载~~]()                                                          |
-| ArmKVM-Standard-V1 | Armbian    |    ×     | armbian-minimal-230719                   |                                                         [~~下载~~]()                                                          |
-| ArmKVM-Standard-V1 | BusyBox    |    ×     | buildroot-230719                         |                                                         [~~下载~~]()                                                          |
+| 硬件版本               | 操作系统       | 内置 PiKVM | 版本                                  |                                                         下载地址                                                          |                                                                                   
+|--------------------|------------|:--------:|-------------------------------------|:---------------------------------------------------------------------------------------------------------------------:|
+| ArmKVM-Standard-V1 | Arch Linux |    √     | arch-linux-pikvm-base-stable-231107 | [下载](http://913666.xyz:50080/ArmKVM/images/Standard-V1/ArmKVM-Standard-V1_Arch-Linux-PiKVM-Base-Stable-231107.img.gz) |
+| ArmKVM-Standard-V1 | Arch Linux |    √     | arch-linux-pikvm-testing-231111     |   [下载](http://913666.xyz:50080/ArmKVM/images/Standard-V1/ArmKVM-Standard-V1_Arch-Linux-PiKVM-Testing-231111.img.gz)   |
+| ArmKVM-Standard-V1 | Armbian    |    ×     | armbian-minimal-stable-231111       |    [下载](http://913666.xyz:50080/ArmKVM/images/Standard-V1/ArmKVM-Standard-V1_Armbian-Minimal-Stable-231111.img.gz)    |
+| ArmKVM-Standard-V1 | BusyBox    |    ×     | buildroot-stable-231111             |       [下载](http://913666.xyz:50080/ArmKVM/images/Standard-V1/ArmKVM-Standard-V1_Buildroot-Stable-231111.img.gz)       |
 
-> 历史镜像归档：[浏览](http://913666.xyz:50080/ArmKVM/images)
+> 历史镜像归档：[浏览](http://913666.xyz:50080/ArmKVM/images/Standard-V1)
+
+> 更新日志：[查看](http://913666.xyz:50080/ArmKVM/images/Standard-V1/CHANGELOG-CN.md)
 
 2. 下载 Etcher 烧录工具：[Etcher 官网下载](https://etcher.balena.io)<br>
    Etcher 官方提供了 Windows、MacOS 和 Linux 三个平台的版本，您可以根据自己的系统下载对应的版本。<br>
@@ -212,47 +215,45 @@ ArmKVM 提供的各项功能了，Enjoy it!
 
 ## 文件系统只读/读写模式切换
 
+!> 注意：配置 `文件系统只读/读写模式切换` 前，请先切换至 root 用户。
+
 在 `网页终端` 界面输入 `rw` 命令并回车，即可切换至读写模式。再次输入 `ro` 命令并回车，即可切换至只读模式。
+
+## 开机脚本
+
+!> 注意：修改 `开机脚本` 前，请先切换至 root 用户并将文件系统切换至读写模式。
+
+在 `网页终端` 界面输入 `nano /etc/rc.local` 命令并回车，编辑开机脚本。
 
 ## 无线网络配置
 
-!> 注意：使用 `nmtui` 命令配置无线网络前，请先切换至 root 用户并将文件系统切换至读写模式。
+!> 注意：使用无线网络连接登录 `网页终端` 进行 WiFi 重新配置时，可能会出现暂时的断线重连，因此更推荐在有线网络环境下进行
+WiFi 的重新配置。
 
 1. 将受支持的USB无线网卡接入 ArmKVM ，受支持的 USB 无线网卡的型号请参考 [无线网卡支持列表](#无线网卡支持列表)。
-2. 在 `网页终端` 界面输入 `su -` 命令并回车，按照提示输入 root 用户的密码(默认密码为 `root`)，回车切换至 root 用户。
-3. 继续在 `网页终端` 界面输入 `rw && systemctl restart NetworkManager`
-   命令并回车，此命令将文件系统切换至读写模式并重启 `NetworkManager` 服务。此时 `网页终端`
-   可能会断开连接并自动重连，您需要重新连接到 `网页终端`。
-   [![NetworkManager TUI](https://s1.ax1x.com/2023/07/29/pPpFYZ9.jpg)](https://imgse.com/i/pPpFYZ9)
-4. 继续在 `网页终端` 界面输入 `nmtui` 命令并回车。
-   [![NetworkManager TUI](https://s1.ax1x.com/2023/07/29/pPpFYZ9.jpg)](https://imgse.com/i/pPpFYZ9)
-5. 进入 `NetworkManager TUI` 界面后，使用方向键选择 `Activate a connection` 并回车，即可扫描并选择连接您的无线网络。
+2. 在 `网页终端` 界面输入 `wifi` 命令并回车，按照提示输入 root 用户的密码(默认密码为 `root`)，回车。
+3. 进入 `NetworkManager TUI` 界面后，使用方向键选择 `Activate a connection` 并回车，即可扫描并选择连接您的无线网络。
    [![无线网络列表](https://s1.ax1x.com/2023/07/30/pPpFhz8.jpg)](https://imgse.com/i/pPpFhz8)
-
-!> 注意：配置完成后，建议将文件系统切换回只读模式以应对意外断电。
+4. 配置完成后，WiFi 配置将被保存，开机启动连接。
 
 ## 虚拟局域网 (VPN)
 
 ### ZeroTier
 
-!> 注意：配置 `ZeroTier` 内网穿透前，请先切换至 root 用户并将文件系统切换至读写模式。
-
-1. 在 `网页终端` 界面输入 `systemctl enable zerotier-one` 命令并回车，即可启用 `Zerotier`
-   服务 (开机启动项)。
-   [![ZeroTier](https://s1.ax1x.com/2023/07/30/pPpFqHJ.jpg)](https://imgse.com/i/pPpFqHJ)
-2. 继续在 `网页终端` 界面输入 `systemctl start zerotier-one` 命令并回车，即可运行 `Zerotier` 服务。
-   [![ZeroTier](https://s1.ax1x.com/2023/07/30/pPpFqHJ.jpg)](https://imgse.com/i/pPpFqHJ)
-3. 继续在 `网页终端` 界面输入 `zerotier-cli join` 命令并回车，按照提示输入 `Zerotier` 网络
-   ID，回车即可加入 `Zerotier` 网络。
-   [![ZeroTier](https://s1.ax1x.com/2023/07/30/pPpFqHJ.jpg)](https://imgse.com/i/pPpFqHJ)
-
-!> 注意：配置完成后，建议将文件系统切换回只读模式以应对意外断电。
+1. 在 `网页终端` 界面输入 `zerotier-run` 命令并回车，按照提示输入 root 用户的密码(默认密码为 `root`)，回车。
+2. 然后进行后续配置。配置完成后，服务会立即启动，并保留配置开机自启动。
 
 ## 内网穿透
 
-### NPS
+### NPS (NPC)
 
-### FRP
+1. 在 `网页终端` 界面输入 `npc-run` 命令并回车，按照提示输入 root 用户的密码(默认密码为 `root`)，回车。
+2. 然后进行后续配置。配置完成后，服务会立即启动，并保留配置开机自启动。
+
+### FRP (FRPC)
+
+1. 在 `网页终端` 界面输入 `frpc-run` 命令并回车，按照提示输入 root 用户的密码(默认密码为 `root`)，回车。
+2. 然后进行后续配置。配置完成后，服务会立即启动，并保留配置开机自启动。
 
 ## 外设支持列表
 
